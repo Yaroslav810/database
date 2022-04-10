@@ -79,6 +79,6 @@ WHERE m.mark < 5
   AND l.date < '20190512';
 
 # 7. Добавить необходимые индексы.
-CREATE INDEX IX_issuance_group_name ON `group`(name);
-CREATE INDEX IX_issuance_lesson_date ON lesson(date);
-CREATE INDEX IX_issuance_subject_name ON subject(name);
+CREATE INDEX IX_issuance_group_name ON `group` (name);
+CREATE INDEX IX_issuance_lesson_date ON lesson (date);
+CREATE INDEX IX_issuance_subject_name ON subject (name);
