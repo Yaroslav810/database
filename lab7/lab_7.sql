@@ -33,7 +33,7 @@ CREATE PROCEDURE get_debtors(IN group_id int)
 BEGIN
     SELECT st.name, su.name, m.mark
     FROM student st
-             LEFT JOIN `group` g ON g.id_group = st.id_group
+             INNER JOIN `group` g ON g.id_group = st.id_group
              LEFT JOIN lesson l ON g.id_group = l.id_group
              LEFT JOIN subject su ON su.id_subject = l.id_subject
              LEFT JOIN mark m ON l.id_lesson = m.id_lesson AND st.id_student = m.id_student
