@@ -80,7 +80,7 @@ WHERE rib1.checkin_date BETWEEN rib2.checkin_date AND rib2.checkout_date &&
 # 8. Создать бронирование в транзакции
 BEGIN;
 INSERT INTO client (name, phone)
-VALUES ('Yaroslav', '+7969778307*');
+VALUES ('Yaroslav', '+796*778*0**');
 INSERT INTO booking (id_client, booking_date)
 VALUES ((SELECT id_client FROM client WHERE name = 'Yaroslav' && phone = '+7969778307*'), '2022-03-18');
 COMMIT;
